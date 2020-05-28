@@ -60,7 +60,8 @@
   
   }
  
-
+/* section */
+  .section{margin: auto; max-width: 1400px;}
   
   /* Universal tags */
   *{
@@ -141,17 +142,35 @@
   
 
   /* Nav */
-  #navbar{display:flex; justify-content: space-between; padding: 16px; color: var(--color-white); background-color: var(--color-right-blue); align-items: center;}
+  #navbar{display:flex; justify-content: space-between; padding: 16px; color: var(--color-white); 
+    background-color: var(--color-right-blue); align-items: center;}
   .navbar__logo{font-weight: var(--weight-semi-bold); font-size: var(--font-medium);}
   .nav__barmenu{display: flex;}
-  .navbar__menu__item{margin: 0 4px; padding: 8px 16px; border-radius: var(--size-boder-radius); cursor: pointer;}
+  .navbar__menu__item{margin: 0 4px; padding: 8px 16px; border-radius: var(--size-boder-radius); cursor: pointer; 
+    transition: all var(--animation-duration) ease;}
   .navbar__menu__item.active{border: 1px solid white; }
   .navbar__menu__item:hover{background: var(--color-dark-blue);}
 
   /* Home */
   #home{padding: 40px 0 0 40px; background: url(imgs/home-bk.png) no-repeat; text-align: center; }
-  .home__avatar{width: 250px; height: 250px; border: 2px solid var(--color-white); border-radius: 50%;}
+  .square-ct{position: relative;}
+  .square{display: flex; align-items: center; width: 250px;height: 250px; margin: auto; border: 2px solid var(--color-white); 
+    -webkit-animation: rotation 5s infinite linear;}
+    @-webkit-keyframes rotation {
+      from {-webkit-transform: rotate(0deg);}
+      to   {-webkit-transform: rotate(359deg);}
+    }
+  .home__avatar{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 250px; height: 250px; border: 2px solid var(--color-white); border-radius: 50%;}
   .home__title,
   .home__description{color: var(--color-white);}
   .home__contact{margin: 24px; padding: 8px 12px; color: var(--color-white); font-weight: var(--weight-bold)0; font-size: var(--font-regular);
   border: 2px solid var(--color-white); border-radius: var(--color-white);}
+
+  /* About */
+  .about__majors{display: flex; justify-content: center; margin: auto; padding: 30px;}
+  .major{padding: 30px; }
+  .majors__icon{width: 170px; height: 170px; margin: auto; color: var(--color-right-blue); font-size: 70px; 
+    line-height: 170px; text-align: center; border: 2px solid var(--color-right-blue); border-radius: 50%;
+    }
+  .majors__icon>i{ transition: all var(--animation-duration) ease;}  
+  .majors__icon>i:hover{color: var(--color-dark-blue); transform: rotate(-30deg) scale(1.2);}
