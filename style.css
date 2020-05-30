@@ -61,7 +61,19 @@
   }
  
 /* section */
-  .section{margin: auto; max-width: 1400px;}
+  .section{margin: auto; 
+    padding: 50px;
+    text-align: center; }
+
+  .section__container{
+    margin: auto;
+    max-width: 1400px;
+  }
+
+  .text__container{
+    margin: auto;
+    max-width: 1000px;
+  }
   
   /* Universal tags */
   *{
@@ -144,6 +156,7 @@
   /* Nav */
   #navbar{display:flex; justify-content: space-between; padding: 16px; color: var(--color-white); 
     background-color: var(--color-right-blue); align-items: center;}
+  
   .navbar__logo{font-weight: var(--weight-semi-bold); font-size: var(--font-medium);}
   .nav__barmenu{display: flex;}
   .navbar__menu__item{margin: 0 4px; padding: 8px 16px; border-radius: var(--size-boder-radius); cursor: pointer; 
@@ -152,14 +165,15 @@
   .navbar__menu__item:hover{background: var(--color-dark-blue);}
 
   /* Home */
-  #home{padding: 40px 0 0 40px; background: url(imgs/home-bk.png) no-repeat; text-align: center; }
+  #home{ background: url(imgs/home-bk.png) no-repeat; background-size: auto; text-align: center; }
+  
   .square-ct{position: relative;}
   .square{display: flex; align-items: center; width: 250px;height: 250px; margin: auto; border: 2px solid var(--color-white); 
     -webkit-animation: rotation 5s infinite linear;}
     @-webkit-keyframes rotation {
       from {-webkit-transform: rotate(0deg);}
-      to   {-webkit-transform: rotate(359deg);}
-    }
+      to   {-webkit-transform: rotate(359deg);}}
+  
   .home__avatar{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 250px; height: 250px; border: 2px solid var(--color-white); border-radius: 50%;}
   .home__title,
   .home__description{color: var(--color-white);}
@@ -167,10 +181,38 @@
   border: 2px solid var(--color-white); border-radius: var(--color-white);}
 
   /* About */
+  #about{padding:40px 0 40px 0;}
+
   .about__majors{display: flex; justify-content: center; margin: auto; padding: 30px;}
+
   .major{padding: 30px; }
   .majors__icon{width: 170px; height: 170px; margin: auto; color: var(--color-right-blue); font-size: 70px; 
-    line-height: 170px; text-align: center; border: 2px solid var(--color-right-blue); border-radius: 50%;
-    }
+    line-height: 170px; text-align: center; border: 2px solid var(--color-right-blue); border-radius: 50%;}
   .majors__icon>i{ transition: all var(--animation-duration) ease;}  
   .majors__icon>i:hover{color: var(--color-dark-blue); transform: rotate(-30deg) scale(1.2);}
+
+  .study{display: flex; text-align: center; padding: 10px 0;}
+  .study__logo{width: 180px; height: 50px;}
+  .study__name{font-weight: var(--weight-bold ); font-size: var(--font-small);}
+  .studt__period{font-size: var(--font-micro);}
+  .study__name,
+  .study__period{color: var(--color-light-grey);}
+  .study__container{padding: 0 16px; text-align: center;} 
+
+  /* Skills */
+  #skills{background-color: var(--color-yellow);}
+
+  .skillset{display: flex; margin-top: 20px; color: var(--color-light-white); background-color: var(--color-light-grey);}
+  .skillset__title{color: var(--color-light-white);}
+      /* 플렉스 박스안의 상자크기를 조절   */
+  .skillset__left{flex-basis: 60%; padding: 20px 40px; background-color: var(--color-dark-grey);}
+  .skillset__right{flex-basis: 40%;}
+  
+  .skill{margin-bottom: 32px;}
+  .skill__description{display: flex; justify-content: space-between;}
+  .skill__bar{width: 100%; height: 3px; background-color: var(--color-light-grey);}
+  .skill__value{height: 3px; background-color: var(--color-orange);}
+  
+  .tools{width: 100%; background-color: var(--color-grey);}
+  .tools,
+  .etc{padding: 20px;}
