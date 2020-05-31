@@ -91,7 +91,7 @@
       color: var(--color-white);
   }
   
-  ul{
+  ul,li{
       list-style: none;
       padding-left: 0;
   }
@@ -154,11 +154,11 @@
   
 
   /* Nav */
-  #navbar{display:flex; justify-content: space-between; padding: 16px; color: var(--color-white); 
+  #navbar{display:flex; justify-content: space-between;  padding: 16px; color: var(--color-white); 
     background-color: var(--color-right-blue); align-items: center;}
   
   .navbar__logo{font-weight: var(--weight-semi-bold); font-size: var(--font-medium);}
-  .nav__barmenu{display: flex;}
+  .nav__barmenu{display: flex; flex-wrap: wrap;}
   .navbar__menu__item{margin: 0 4px; padding: 8px 16px; border-radius: var(--size-boder-radius); cursor: pointer; 
     transition: all var(--animation-duration) ease;}
   .navbar__menu__item.active{border: 1px solid white; }
@@ -183,8 +183,7 @@
   /* About */
   #about{padding:40px 0 40px 0;}
 
-  .about__majors{display: flex; justify-content: center; margin: auto; padding: 30px;}
-
+  .about__majors{display: flex; justify-content: center;  flex-wrap: wrap; margin: auto; padding: 30px;}
   .major{padding: 30px; }
   .majors__icon{width: 170px; height: 170px; margin: auto; color: var(--color-right-blue); font-size: 70px; 
     line-height: 170px; text-align: center; border: 2px solid var(--color-right-blue); border-radius: 50%;}
@@ -221,17 +220,17 @@
   .work__categories{margin: 40px;}
 
   .category__btn{padding: 8px 48px; font-size: var(--font-regular); 
-    border: 1px soild #7c7979; border-radius: var(--size-boder-radius);}
+    border: 1px soild var(--color-light-grey); border-radius: var(--size-boder-radius);}
   .category__btn:hover,
   .category__btn.active{color: var(--color-white); background-color: var(--color-right-blue);}
 
       /* 내려오는 애니매이션 효과 */
-  .category__count{position: relative; top:-20px; left: 4px; display: inline-block; width: 24px; height: 24px; color: var(--color-white); line-height: 24px; 
-  background-color: orange; border-radius: 50%; opacity: 0; transition: all var(--animation-duration) ease-in;}
+  .category__count{position: relative; left: 4px; display: inline-block; width: 24px; height: 24px; color: var(--color-white); line-height: 24px; 
+  background-color: orange; border-radius: 50%; opacity: 0; transform: translateY(-8px); transition: all var(--animation-duration) ease-in;}
       /*카테고리 버튼이 액티브상태일의 카테고리 카운트  */
+       /*카테고리 버튼에 마우스가 호버됐을때 안에있는 카테고리 카운트일때만   */
   .category__btn.active .category__count,
-      /*카테고리 버튼에 마우스가 호버됐을때 안에있는 카테고리 카운트일때만   */
-  .category__btn:hover .category__count{opacity: 1; top: 0;}
+  .category__btn:hover .category__count{transform: translateY(0px); opacity: 1; top: 0;}
 
 
   .work__projects{display: flex; flex-wrap: wrap; justify-content: center;}
@@ -246,3 +245,23 @@
      background-color: var(--color-dark-white);}
   .project__description~span{padding: 10px 0;}
 
+  /* testimonials */
+  .testimonials{ background-color: var(--color-dark-white); border-radius: var(--size-boder-radius);}
+  .testimonial{display: flex; justify-content: center; margin: 32px 0;}
+  .testmonial__avater{margin: 10px 0; width: 150px; height: 150px;  border-radius: 50%; background-color: var(--color-orange);}
+  .testmonial__speech-bubble{padding: 18px; margin:10px; background-color:var(--color-white); border-radius: var(--size-boder-radius);}
+  .testmonial__avater:nth-child(odd){margin-right: 10px;}
+  .testmonial__avater:nth-child(even){margin-left: 10px;}
+  .testmonial__speech-bubble>p{color: var(--color-light-grey);}
+  .name{color: var(--color-right-blue);}
+
+  /* Contact */
+  #contact{background-color: var(--color-right-blue);}
+  .contact__title,
+  .contact__email,
+  .contact__rights{color: var(--color-white);}
+
+  .contact__title{margin: 32px 0;}
+  .contact__link{margin:24px 0 ; font-size: var(--font-large);}
+  .contact__link i{transition: all var(--animation-duration) ease-in;}
+  .contact__link i:hover{transform: scale(1.1.); color: var(--color-yellow);}
