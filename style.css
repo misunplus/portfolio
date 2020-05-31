@@ -154,15 +154,16 @@
   
 
   /* Nav */
-  #navbar{display:flex; justify-content: space-between;  padding: 16px; color: var(--color-white); 
-    background-color: var(--color-right-blue); align-items: center;}
+  #navbar{display:flex;  justify-content: space-between;  padding: 16px; color: var(--color-white); 
+    background-color: var(--color-right-blue); align-items:center;}
   
   .navbar__logo{font-weight: var(--weight-semi-bold); font-size: var(--font-medium);}
-  .nav__barmenu{display: flex; flex-wrap: wrap;}
+  .navbar__menu{display: flex;}
   .navbar__menu__item{margin: 0 4px; padding: 8px 16px; border-radius: var(--size-boder-radius); cursor: pointer; 
     transition: all var(--animation-duration) ease;}
   .navbar__menu__item.active{border: 1px solid white; }
   .navbar__menu__item:hover{background: var(--color-dark-blue);}
+  .navbar__toggle-btn{position: absolute; top: 24px; right: 32px; font-size: 24px; color: var(--color-white); display: none;}
 
   /* Home */
   #home{ background: url(imgs/home-bk.png) no-repeat; background-size: auto; text-align: center; }
@@ -265,3 +266,23 @@
   .contact__link{margin:24px 0 ; font-size: var(--font-large);}
   .contact__link i{transition: all var(--animation-duration) ease-in;}
   .contact__link i:hover{transform: scale(1.1.); color: var(--color-yellow);}
+
+/* For below 768px screen width */
+  @media screen and (max-width:768px){
+    .navbar__toggle-btn{display: block; border: 0;}
+    #navbar{flex-direction: column; align-items: flex-start;}
+    .navbar__menu{flex-direction: column; width: 100%; text-align: center;}
+
+    .about__majors{flex-direction: column;}
+    .majors__title{margin-top: 20px;}
+    .study{justify-content: center;}
+
+    .skillset {flex-direction: column;}
+    .work__projects{flex-direction: column; align-items: center;}
+    /* flex-grow 왜안먹냐...?응? */
+    .project{ width: 450px; height: 450px;}
+
+    .testmonial__avater{width: 80px; height: 80px; margin-left:10px ;}
+  }
+
+  
