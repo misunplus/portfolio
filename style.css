@@ -154,8 +154,9 @@
   
 
   /* Nav */
-  #navbar{display:flex;  justify-content: space-between;  padding: 16px; color: var(--color-white); 
-    background-color: var(--color-right-blue); align-items:center;}
+  #navbar{display:flex;  justify-content: space-between; position: fixed; width:100%;  padding: 16px; color: var(--color-white); 
+    background-color: transparent; align-items:center; z-index:10;}
+  #navbar.navbar--dark{padding: 8px; background-color: var(--color-right-blue); transition: all var(--animation-duration) ease-in-out;}
   
   .navbar__logo{font-weight: var(--weight-semi-bold); font-size: var(--font-medium);}
   .navbar__menu{display: flex;}
@@ -166,7 +167,7 @@
   .navbar__toggle-btn{position: absolute; top: 24px; right: 32px; font-size: 24px; color: var(--color-white); display: none;}
 
   /* Home */
-  #home{ background: url(imgs/home-bk.png) no-repeat; background-size: auto; text-align: center; }
+  #home{ padding: 40px; padding-top: 150px; background: url(imgs/home-bk.png) center/cover no-repeat; background-size: auto; text-align: center; }
   
   .square-ct{position: relative;}
   .square{display: flex; align-items: center; width: 250px;height: 250px; margin: auto; border: 2px solid var(--color-white); 
