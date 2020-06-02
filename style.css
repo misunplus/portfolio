@@ -281,7 +281,7 @@
     .skillset {flex-direction: column;}
     .work__projects{flex-direction: column; align-items: center;}
     /* flex-grow 왜안먹냐...?응? */
-    .project{ width: 450px; height: 450px;}
+    .project{ flex-grow: 1;}
 
     .testmonial__avater{width: 80px; height: 80px; margin-left:10px ;}
   }
