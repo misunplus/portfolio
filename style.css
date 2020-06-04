@@ -164,7 +164,7 @@
     transition: all var(--animation-duration) ease;}
   .navbar__menu__item.active{border: 1px solid white; }
   .navbar__menu__item:hover{background: var(--color-dark-blue);}
-  .navbar__toggle-btn{position: absolute; top: 24px; right: 32px; font-size: 24px; color: var(--color-white); display: none;}
+  .navbar__toggle-btn{position: absolute; top: 24px; right: 32px; font-size: 24px; color: var(--color-white);border: none; display: none;}
 
   /* Home */
   #home{ padding: 40px; padding-top: 150px; background: url(imgs/home-bk.png) center/cover no-repeat; background-size: auto; text-align: center; }
@@ -230,7 +230,7 @@
   .category__count{position: relative; left: 4px; display: inline-block; width: 24px; height: 24px; color: var(--color-white); line-height: 24px; 
   background-color: orange; border-radius: 50%; opacity: 0; transform: translateY(-8px); transition: all var(--animation-duration) ease-in;}
       /*카테고리 버튼이 액티브상태일의 카테고리 카운트  */
-       /*카테고리 버튼에 마우스가 호버됐을때 안에있는 카테고리 카운트일때만   */
+      /*카테고리 버튼에 마우스가 호버됐을때 안에있는 카테고리 카운트일때만   */
   .category__btn.active .category__count,
   .category__btn:hover .category__count{transform: translateY(0px); opacity: 1; top: 0;}
 
@@ -245,7 +245,7 @@
   .project__description>h3{ padding: 10px 0; margin:0px; color: var(--color-white);}
   .project__description>h3::after{position: absolute; left: 44%; bottom: 46%; content: ''; width: 25px; height: 2px;
      background-color: var(--color-dark-white);}
-  .project__description~span{padding: 10px 0;}
+  .project__description~span{padding: 10px 0; }
 
   /* testimonials */
   .testimonials{ background-color: var(--color-dark-white); border-radius: var(--size-boder-radius);}
@@ -268,6 +268,16 @@
   .contact__link i{transition: all var(--animation-duration) ease-in;}
   .contact__link i:hover{transform: scale(1.1.); color: var(--color-yellow);}
 
+  /* Arrow up */
+  .arrow__up{position: fixed; 
+    width: 70px; height: 70px; bottom: 50px; right: 50px; 
+    color: var(--color-white); font-size: 50px;
+    background-color: var(--color-right-blue);
+    border: 1px solid var(--color-right-blue);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 300ms ease-in; pointer-events: none;}
+  .visible{opacity: 1; pointer-events: auto;}
 /* For below 768px screen width */
   @media screen and (max-width:768px){
     .navbar__toggle-btn{display: block; border: 0;}
@@ -285,5 +295,7 @@
 
     .testmonial__avater{width: 80px; height: 80px; margin-left:10px ;}
   }
+
+
 
   
