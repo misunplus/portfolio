@@ -1,17 +1,5 @@
 'use Strict';
 
-
-
-// Make bavbar transparent when it is on the top
-// 스크롤이 될때마다 ()=>{} 실행
-// document.addEventListener('scroll', ()=>{
-//     if (window.scrollY > navbarHeight){
-//         navbar.classList.add('navbar--dark');
-//     }else{
-//         navbar.classList.remove('navbar--dark');
-//     }
-// } )
-
 //Navbar scroll navbar--dark
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -76,9 +64,39 @@ document.addEventListener('scroll', () =>{
 arrowUp.addEventListener('click', ()=>{
     const homeLink = ("#home");
     scrollIntoview(homeLink);
-})
+});
 
 
+//Work filtering
+const work__projects = document.querySelector('.work__projects');
+
+
+const project = document.querySelectorAll('.project');
+
+
+document.addEventListener('click', (event)=>{
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if (filter == null){
+        return;
+    }
+    
+    // let projects;
+    // for(let i=0; i<project.length; ++i){
+    //     projects = project[i];
+    // } 
+    work__projects.classList.add('ani-out');
+
+    setTimeout(()=>{
+    work__projects.classList.remove('ani-out');   
+    }, 300);
+    project.forEach((project)=>{
+        if(filter === project.dataset.type || filter === "*"){
+            project.classList.remove('invisible');
+        } else{
+            project.classList.add('invisible'); 
+        }  
+    });
+});
 
 
 
@@ -86,4 +104,4 @@ arrowUp.addEventListener('click', ()=>{
 function scrollIntoview(selecter){
     const scrollTo = document.querySelector(selecter);
     scrollTo.scrollIntoView({behavior: 'smooth'});
-}
+};
