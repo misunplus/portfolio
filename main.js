@@ -69,16 +69,19 @@ arrowUp.addEventListener('click', ()=>{
 
 //Work filtering
 const work__projects = document.querySelector('.work__projects');
-
-
 const project = document.querySelectorAll('.project');
-
-
 document.addEventListener('click', (event)=>{
     const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
     if (filter == null){
         return;
     }
+
+    //Remove Selection Active
+    const active = document.querySelector('.category__btn.selected');
+    if(active !=null){
+        active.classList.remove('selected');
+    }
+    event.target.classList.add('selected');
     
     // let projects;
     // for(let i=0; i<project.length; ++i){

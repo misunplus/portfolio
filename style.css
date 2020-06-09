@@ -160,10 +160,9 @@
   
   .navbar__logo{font-weight: var(--weight-semi-bold); font-size: var(--font-medium);}
   .navbar__menu{display: flex;}
-  .navbar__menu__item{margin: 0 4px; padding: 8px 16px; border-radius: var(--size-boder-radius); cursor: pointer; 
+  .navbar__menu__item{margin: 0 4px; padding: 8px 16px; border: 1px solid transparent; border-radius: var(--size-boder-radius); cursor: pointer; 
     transition: all var(--animation-duration) ease;}
-  .navbar__menu__item.active{border: 1px solid white; }
-  .navbar__menu__item:hover{background: var(--color-dark-blue);}
+  .navbar__menu__item:hover{background: var(--color-dark-blue); border: 1px solid white; }
   .navbar__toggle-btn{position: absolute; top: 24px; right: 32px; font-size: 24px; color: var(--color-white);border: none; display: none;}
 
   /* Home */
@@ -225,14 +224,14 @@
   .category__btn{width:30%; padding: 8px 10px; font-size: var(--font-regular); 
     border: 1px soild var(--color-light-grey); border-radius: var(--size-boder-radius);}
   .category__btn:hover,
-  .category__btn.active{color: var(--color-white); background-color: var(--color-right-blue);}
+  .category__btn.selected{color: var(--color-white); background-color: var(--color-right-blue);}
 
       /* 내려오는 애니매이션 효과 */
   .category__count{position: relative; left: 4px; display: inline-block; width: 24px; height: 24px; color: var(--color-white); line-height: 24px; 
   background-color: orange; border-radius: 50%; opacity: 0; transform: translateY(-8px); transition: all var(--animation-duration) ease-in;}
       /*카테고리 버튼이 액티브상태일의 카테고리 카운트  */
       /*카테고리 버튼에 마우스가 호버됐을때 안에있는 카테고리 카운트일때만   */
-  .category__btn.active .category__count,
+  .category__btn.selected .category__count,
   .category__btn:hover .category__count{transform: translateY(0px); opacity: 1; top: 0;}
 
 
