@@ -18,13 +18,19 @@ const navberMenu = document.querySelector('.navbar__menu');
 
 navberMenu.addEventListener('click', ()=>{
     const targetLink = event.target.dataset.link;
-    console.log(targetLink);
     if(targetLink == null){
         return;        
     }else{
+        navberMenu.classList.add('close');
         scrollIntoview(targetLink);
     }
 });
+
+//Navbar toggle menu
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', ()=>{
+    navberMenu.classList.toggle('close');
+})
 
 
 // Handle Contack me Button move
