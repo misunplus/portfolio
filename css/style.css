@@ -99,6 +99,7 @@ header>#navbar>.navbar_menu>.navbar_item{float: left; margin: 0 5px 0 5px}
 header>#navbar>.navbar_menu>.navbar_item>a{
     padding: 5px 20px; 
     color: var(--light-pink); font-size: var(--font-regular); font-weight: var(--bold); line-height: 50px;
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -152,7 +153,14 @@ header>#navbar>.navbar_menu>.navbar_item.active>a{
     font-weight: 800;
     background-color: var(--gray);
     -webkit-animation: slide-in-blurred-top 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
-    animation: slide-in-blurred-top 2s  cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+    animation: slide-in-blurred-top 1.5s  cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+    z-index: 10000;
+}
+
+#home>.home_cont>.main_logo>.home_contact:hover{
+    color: var(--dark-pink);
+    background-color: var(--light-white);
+    transition: all 0.3s ease-in;
 }
 @-webkit-keyframes slide-in-blurred-top {
     0% {
@@ -200,8 +208,10 @@ header>#navbar>.navbar_menu>.navbar_item.active>a{
 #about>.major{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
 }
 #about>.major>.marjor_cont>.major_icon{
     position: relative;
@@ -230,6 +240,32 @@ header>#navbar>.navbar_menu>.navbar_item.active>a{
 #about>.major>.marjor_cont>.major_description{
     color: var(--dark-pink);
     font-size: var(--font-small);
+}
+
+
+/* Study */
+
+#about>.study{
+    margin-top: 20px;
+    position: relative;
+    height: 50px;
+
+}
+#about>.study>img{
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+}
+#about>.study>p{
+    font-weight: 600;
+    font-size: var(--font-small);
+    margin-left: 220px;
+}
+#about>.study>p:last-child{
+    font-weight: 400;
+    font-size: var(--font-micro);
+    margin-left: 220px;
 }
 
 
