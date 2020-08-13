@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beckia PortFolio</title>
-    <meta name = "description" content = "PortFolio for Beckia">
-    <meta name = " author" content="Beckia">
+    <meta name="description" content="PortFolio for Beckia">
+    <meta name=" author" content="Beckia">
     <script src="https://kit.fontawesome.com/a1de2889fc.js" crossorigin="anonymous">
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type = "image/png" href="imgs/favicon.ico"/>
+    <link rel="icon" type="image/png" href="imgs/favicon.ico" />
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav id="navbar" class="section">
-            <div class="navbar__logo">
-                <i class="fab fa-diaspora"></i>
-                <a href="#">Beckia</a>
-            </div>
-            <div class="navbar__menu close">
-                <ul class="navbar__menu ">
-                    <li class="navbar__menu__item" data-link="#home">Home</li>
-                    <li class="navbar__menu__item" data-link="#about">About</li>
-                    <li class="navbar__menu__item" data-link="#skills">Skills</li>
-                    <li class="navbar__menu__item" data-link="#work">My work</li>
-                    <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
-                    <li class="navbar__menu__item" data-link="#contact">Contact</li>
-                </ul>
-            </div>
+        <div class="navbar__logo">
+            <i class="fab fa-diaspora"></i>
+            <a href="#">Beckia</a>
+        </div>
+        <div class="navbar__menu close">
+            <ul class="navbar__menu ">
+                <li class="navbar__menu__item" data-link="#home">Home</li>
+                <li class="navbar__menu__item" data-link="#about">About</li>
+                <li class="navbar__menu__item" data-link="#skills">Skills</li>
+                <li class="navbar__menu__item" data-link="#work">Study</li>
+                <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
+                <li class="navbar__menu__item" data-link="#contact">Contact</li>
+            </ul>
+        </div>
 
-            <!-- Toglle button -->
-            <button class="navbar__toggle-btn">
-                <i class="fas fa-bars"></i>
-            </button>
+        <!-- Toglle button -->
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
 
     </nav>
     <!-- Home -->
-    <section id="home" class="section " >
+    <section id="home" class="section ">
         <div class="home__ct">
             <div class="square-ct">
                 <div class="square"></div>
                 <img src="imgs/Beckia-logo.png" alt="Beckia profile photo" class="home__avatar">
             </div>
-            
-            <h1 class="home__title">Hello <br/> I'm Beckia nice to meet you~!</h1>
-            <h2 class="home__description text__container"> i'm a junior soft ware engineer. I will be best soft ware engineer. So, pick me
+
+            <h1 class="home__title">Hello <br /> I'm Beckia nice to meet you~!</h1>
+            <h2 class="home__description text__container"> i'm a junior soft ware engineer. I will be best soft ware
+                engineer. So, pick me
                 ........................................................................................
-            .....................................................................................</h2>
+                .....................................................................................</h2>
             <button class="home__contact" data-link="#contact">CONTACK ME</button>
         </div>
     </section>
     <!-- About -->
     <section id="about" class="section">
         <div class="section__container">
-            <div >
+            <div>
                 <h1>About Me</h1>
                 <p class="text__container">ㅁㅇ러ㅣㄴㅇ하이하잉 마어리ㅏ너이랴ㅓㅁㄴ댜 ㄴㅇ러ㅣ나얾널읾너일dㄴ아런이런아ㅣ럼ㄴ아리ㅓ
                     ㅁ넝리ㅏㄴ이ㅏ러니ㅏㅓㄹ마ㅣㄴ호로호호호호로로로롤ㄹㄹ롷ㅎㅎ바람처럼 사라져가서 다른 어떤곳에~
@@ -89,14 +92,14 @@
                 </div>
             </div>
             <div class="about__study">
-                <div class="study text__container" >
+                <div class="study text__container">
                     <img src="imgs/jobs/SHlogo.png" alt="seoulhyundai" class="study__logo">
                     <div class="study__container">
                         <p class="study__name">서울현대직업전문학교</p>
                         <p class="study__period">2000.00.00~2000.00.00 </p>
                     </div>
                 </div>
-                <div class="study text__container" >
+                <div class="study text__container">
                     <img src="imgs/jobs/Thejoeunlogo.gif" alt="thejoeun" class="study__logo">
                     <div class="study__container">
                         <p class="study__name">더조은아카데미</p>
@@ -139,10 +142,10 @@
                     <div class="skill">
                         <div class="skill__description">
                             <span>CSS</span>
-                            <span>60%</span>
+                            <span>80%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill__value" style="width: 60%;"></div>
+                            <div class="skill__value" style="width: 80%;"></div>
                         </div>
                     </div>
                     <div class="skill">
@@ -197,79 +200,79 @@
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="category__btn selected"  data-filter = "*" >All
-            <span class="category__count">8</span>
+            <button class="category__btn selected" data-filter="*">All
+                <span class="category__count">8</span>
             </button>
-            <button class="category__btn" data-filter = "css">CSS
+            <button class="category__btn" data-filter="css">CSS
                 <span class="category__count">5</span>
             </button>
-            <button class="category__btn" data-filter = "javascript">JavaScript
+            <button class="category__btn" data-filter="javascript">JavaScript
                 <span class="category__count">3</span>
             </button>
         </div>
 
 
         <div class="work__projects">
-                <a class="project" href="https://github.com/misunplus/jobkorea"  target="blank" data-type="css">
-                    <img src="#" alt="신대구 고속도로 스크린샷">
-                    <div class="project__description">
-                        <h3>신대구 고속도로1</h3>
-                        <span>Clone Coding with CSS And HTML</span>
-                    </div>    
-                </a>
-                <a class="project" href="https://github.com/misunplus/jobkorea"  target="blank" data-type="css">
-                    <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
-                    <div class="project__description">
-                        <h3>신대구 고속도로2</h3>
-                        <span>Clone Coding with CSS And HTML</span>
-                    </div>    
-                </a>
-                <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="css">
-                    <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
-                    <div class="project__description">
-                        <h3>신대구 고속도로3</h3>
-                        <span>Clone Coding with CSS And HTML</span>
-                    </div>    
-                </a>
-                <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type = "css">
-                    <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
-                    <div class="project__description">
-                        <h3>신대구 고속도로4</h3>
-                        <span>Clone Coding with CSS And HTML</span>
-                    </div>    
-                </a>
-                <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="css">
-                    <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
-                    <div class="project__description">
-                        <h3>신대구 고속도로5</h3>
-                        <span>Clone Coding with CSS And HTML</span>
-                    </div>    
-                </a>
-                <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="javascript">
-                    <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
-                    <div class="project__description">
-                        <h3>신대구 고속도로6</h3>
-                        <span>Clone Coding with CSS And HTML</span>
-                    </div>    
-                </a>
-                <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="javascript">
-                    <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
-                    <div class="project__description">
-                        <h3>신대구 고속도로7</h3>
-                        <span>Clone Coding with CSS And HTML</span>
-                    </div>    
-                </a>
-                <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="javascript">
-                    <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
-                    <div class="project__description">
-                        <h3>신대구 고속도로8</h3>
-                        <span>Clone Coding with CSS And HTML</span>
-                    </div>    
-                </a>
-         
+            <a class="project" href="https://github.com/misunplus/jobkorea" target="blank" data-type="css">
+                <img src="#" alt="신대구 고속도로 스크린샷">
+                <div class="project__description">
+                    <h3>신대구 고속도로1</h3>
+                    <span>Clone Coding with CSS And HTML</span>
+                </div>
+            </a>
+            <a class="project" href="https://github.com/misunplus/jobkorea" target="blank" data-type="css">
+                <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
+                <div class="project__description">
+                    <h3>신대구 고속도로2</h3>
+                    <span>Clone Coding with CSS And HTML</span>
+                </div>
+            </a>
+            <a href="https://github.com/misunplus/line" class="project" target="blank" data-type="css">
+                <img src="imgs/line_cover.png" alt="라인커버">
+                <div class="project__description">
+                    <h3>라인 사이트 커버</h3>
+                    <span>Clone Coding with CSS And HTML</span>
+                </div>
+            </a>
+            <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="css">
+                <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
+                <div class="project__description">
+                    <h3>신대구 고속도로4</h3>
+                    <span>Clone Coding with CSS And HTML</span>
+                </div>
+            </a>
+            <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="css">
+                <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
+                <div class="project__description">
+                    <h3>신대구 고속도로5</h3>
+                    <span>Clone Coding with CSS And HTML</span>
+                </div>
+            </a>
+            <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="javascript">
+                <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
+                <div class="project__description">
+                    <h3>신대구 고속도로6</h3>
+                    <span>Clone Coding with CSS And HTML</span>
+                </div>
+            </a>
+            <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="javascript">
+                <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
+                <div class="project__description">
+                    <h3>신대구 고속도로7</h3>
+                    <span>Clone Coding with CSS And HTML</span>
+                </div>
+            </a>
+            <a href="https://github.com/misunplus/jobkorea" class="project" target="blank" data-type="javascript">
+                <img src="imgs/Screenshot.png" alt="신대구 고속도로 스크린샷">
+                <div class="project__description">
+                    <h3>신대구 고속도로8</h3>
+                    <span>Clone Coding with CSS And HTML</span>
+                </div>
+            </a>
+
         </div>
 
-        
+
     </section>
     <!-- Testimonials -->
     <section id="testimonials" class="section">
@@ -278,7 +281,7 @@
             <h3>See what they say about me</h3>
             <div class="testimonials text__container">
                 <div class="testimonial">
-                    <img src="imgs/Beckia-logo.png" alt="사람이미지" class="testmonial__avater"/>
+                    <img src="imgs/Beckia-logo.png" alt="사람이미지" class="testmonial__avater" />
                     <div></div>
                     <div class="testmonial__speech-bubble">
                         <p>ㅁㅇ러ㅣㄴㅇ하이하잉 마어리ㅏ너이랴ㅓㅁㄴ댜 ㄴㅇ러ㅣ나얾널읾너일dㄴ아런이런아ㅣ럼ㄴ아리ㅓ
@@ -293,7 +296,7 @@
                             ㅁ넝리ㅏㄴ이ㅏ러니ㅏㅓㄹ마ㅣㄴ호로호호호호로로로롤ㄹㄹ롷ㅎㅎ바람처럼 사라져가서 다른 어떤곳에~</p>
                         <p class="name">Beckia</p>
                     </div>
-                    <img src="imgs/Beckia-logo.png" alt="사람이미지" class="testmonial__avater"/>
+                    <img src="imgs/Beckia-logo.png" alt="사람이미지" class="testmonial__avater" />
                 </div>
             </div>
         </div>
@@ -324,4 +327,5 @@
 
 
 </body>
+
 </html>
